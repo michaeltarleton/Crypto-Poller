@@ -1,0 +1,9 @@
+{
+    "GDAX": {
+        "API": {
+            "KEY": "GDAXAPIKEY",
+            "SECRET": "GDAXAPISECRET",
+            "PASSPHRASE": "GDAXAPIPASSPHRASE"
+        }
+    }    
+}
