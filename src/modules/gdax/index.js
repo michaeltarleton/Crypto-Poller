@@ -52,6 +52,9 @@ var getAccounts = function(){
             'CB-ACCESS-TIMESTAMP': '' + timestamp,
         }
     })
+    .then(function(response){
+        return response.data
+    })
     .catch(function(err){
         logger.error(Object.keys(err.request._options))
         logger.error(err.request._options)
