@@ -13,6 +13,7 @@
     "axios": "^0.17.1",
     "config": "^1.28.1",
     "crypto": "^1.0.1",
+    "make-promises-safe": "^1.1.0",
     "pino": "^4.10.1"
   }
 }
