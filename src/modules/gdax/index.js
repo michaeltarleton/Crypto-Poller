@@ -29,6 +29,7 @@ var getBTCUSDTicker = function(){
     return bitcoinPublicClient.getProductTicker()
         .then(function(ticker){
             logger.debug(ticker, 'BTC-USD Ticker')
+            return ticker
         })
         .catch(logError)
 }
