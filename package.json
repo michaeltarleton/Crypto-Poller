@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "config": "^1.28.1",
+    "crypto": "^1.0.1",
     "pino": "^4.10.1"
   }
 }

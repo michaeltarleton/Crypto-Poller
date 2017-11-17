@@ -1,2 +1,8 @@
 process.env.NODE_CONFIG_DIR = __dirname
-module.exports = require('config')
+
+var config = require('config')
+  , path = require('path')
+
+config.appRoot = path.dirname(__dirname)
+
+module.exports = config
