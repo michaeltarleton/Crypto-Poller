@@ -1,9 +1,13 @@
 {
-    "GDAX": {
-        "API": {
-            "KEY": "test",
-            "SECRET": "test",
-            "PASSPHRASE": "test"
+    "logger": {
+        "level": "trace"
+    },
+    "gdax": {
+        "api": {
+            "url": "https://api.gdax.com",
+            "key": "test",
+            "secret": "test",
+            "passphrase": "test"
         }
     }    
 }

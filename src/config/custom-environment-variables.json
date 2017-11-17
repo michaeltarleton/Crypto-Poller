@@ -1,10 +1,13 @@
 {
-    "GDAX": {
-        "API": {
-            "URL": "GDAXAPIURL",
-            "KEY": "GDAXAPIKEY",
-            "SECRET": "GDAXAPISECRET",
-            "PASSPHRASE": "GDAXAPIPASSPHRASE"
+    "logger": {
+        "level": "LOGGERLEVEL"
+    },
+    "gdax": {
+        "api": {
+            "url": "GDAXAPIURL",
+            "key": "GDAXAPIKEY",
+            "secret": "GDAXAPISECRET",
+            "passphrase": "GDAXAPIPASSPHRASE"
         }
     }    
 }
