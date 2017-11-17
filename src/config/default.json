@@ -2,6 +2,18 @@
     "logger": {
         "level": "trace"
     },
+    "email": {
+        "smtp": {
+            "host": "smtp.gmail.com",
+            "port": 465,
+            "clientId": "testClientId",
+            "clientSecret": "testClientSecret",
+            "refreshToken": "testRefreshToken",
+            "from": "test@test.com",
+            "username": "test",
+            "to": "5122979813@txt.att.net, 5129404981@txt.att.net"
+        }
+    },
     "gdax": {
         "api": {
             "url": "https://api.gdax.com",

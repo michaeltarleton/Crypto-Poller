@@ -5,7 +5,4 @@ require('make-promises-safe')
 var logger = require('./logger')
   , settings = require('./config')
   , modules = require('./modules')
-
-modules.gdax.getAccounts()
-
-modules.gdax.getBTCUSDTicker()
+  , emailer = require('./email')

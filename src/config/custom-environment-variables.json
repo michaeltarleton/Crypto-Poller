@@ -2,6 +2,18 @@
     "logger": {
         "level": "LOGGERLEVEL"
     },
+    "email": {
+        "smtp": {
+            "host": "EMAILSMTPHOST",
+            "port": "EMAILSMTPPORT",
+            "clientId": "EMAILSMTPCLIENTID",
+            "clientSecret": "EMAILSMTPCLIENTSECRET",
+            "refreshToken": "EMAILSMTPREFRESHTOKEN",
+            "from": "EMAILSMTPFROM",
+            "username": "EMAILSMTPUSERNAME",
+            "to": "EMAILSMTPTO"
+        }
+    },
     "gdax": {
         "api": {
             "url": "GDAXAPIURL",
