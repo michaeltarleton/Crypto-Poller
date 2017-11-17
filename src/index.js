@@ -7,3 +7,5 @@ var logger = require('./logger')
   , modules = require('./modules')
 
 modules.gdax.getAccounts()
+
+modules.gdax.getBTCUSDTicker()

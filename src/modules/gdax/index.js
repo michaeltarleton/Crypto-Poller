@@ -1,8 +1,13 @@
 var settings = require('../../config')
   , logger = require([settings.appRoot, '/logger'].join(''))
-  , client = require('./client')
   , Gdax = require('gdax')
   , authenticatedClient = new Gdax.AuthenticatedClient(settings.gdax.api.key, settings.gdax.api.secret, settings.gdax.api.passphrase, settings.gdax.api.url)
+  , bitcoinPublicClient = new Gdax.PublicClient('BTC-USD', settings.gdax.api.url)
+
+var logError = function(err){
+    logger.error(err)
+    throw err
+}
 
 var getAccounts = function(){
     return client.getPrivateRoute('GET', '/accounts')
@@ -20,6 +25,15 @@ var getAccounts = function(){
         })
 }
 
+var getBTCUSDTicker = function(){
+    return bitcoinPublicClient.getProductTicker()
+        .then(function(ticker){
+            logger.debug(ticker, 'BTC-USD Ticker')
+        })
+        .catch(logError)
+}
+
 module.exports = {
-    getAccounts: getAccounts
+    getAccounts: getAccounts,
+    getBTCUSDTicker: getBTCUSDTicker
 }
