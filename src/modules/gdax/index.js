@@ -5,6 +5,7 @@ var settings = require('../../config')
   , btcPublicClient = new Gdax.PublicClient('BTC-USD', settings.gdax.api.url)
   , ethPublicClient = new Gdax.PublicClient('ETH-USD', settings.gdax.api.url)
   , ltcPublicClient = new Gdax.PublicClient('LTC-USD', settings.gdax.api.url)
+  , ws = new Gdax.WebsocketClient(['BTC-USD','ETH-USD','LTC-USD'])
 
 var logError = function(err){
     logger.error(err)
@@ -21,6 +22,35 @@ var getAccounts = function(){
             logger.error(err)
             throw err
         })
+}
+
+var processDoneOrder = function(message){
+    logger.trace(message, 'web socket done order', message.reason, message.side, message.price)
+} 
+var processOpenOrder = function(message){
+    logger.trace(message, 'web socket done order')
+} 
+var processReceivedOrder = function(message){
+    logger.trace(message, 'web socket done order')
+} 
+
+var testWebSockets = function(){
+    ws.on('open', function(data){
+        logger.trace(data, 'opening web sockets')
+    })
+    ws.on('message', function(message){
+        switch(message.type){
+            case 'done': processDoneOrder(message)
+            case 'open': processOpenOrder(message)
+            case 'received': processReceivedOrder(message)
+        }
+    })
+    ws.on('close', function(data){
+        logger.trace(data, 'closing web socket')
+    })
+    ws.on('error', function(data){
+        logger.error(data, 'web socket error')
+    })
 }
 
 var getBTCUSDTicker = function(){
@@ -54,5 +84,6 @@ module.exports = {
     getAccounts: getAccounts,
     getBTCUSDTicker: getBTCUSDTicker,
     getETHUSDTicker: getETHUSDTicker,
-    getLTCUSDTicker: getLTCUSDTicker
+    getLTCUSDTicker: getLTCUSDTicker,
+    testWebSockets: testWebSockets
 }

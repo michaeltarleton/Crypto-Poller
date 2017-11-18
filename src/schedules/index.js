@@ -50,6 +50,8 @@ function getGDAXTicker(){
     })
 }
 
+modules.gdax.testWebSockets()
+
 module.exports = function(){
     cron.schedule('0 */15 * * * *', getGDAXTicker)
 }
