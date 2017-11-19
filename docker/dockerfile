@@ -1,0 +1,19 @@
+FROM crypto/crypto-base
+
+LABEL maintainer "Michael Tarleton<michael.tarleton@me.com>"
+
+EXPOSE 80 443
+
+WORKDIR "/home/node"
+
+# Add the package.json
+ADD [ "package*.json", "./" ]
+
+# Install node modules
+RUN npm install --silent --production
+
+# Copy entire app
+ADD src/ ./src
+
+# Run the app
+ENTRYPOINT [ "npm", "start" ]
