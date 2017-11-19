@@ -20,13 +20,10 @@ function getGDAXTicker(){
         msg = [
             '\nBTC: ',
             '$',btc.bid,
-            ' / $',btc.ask,
             '\nETH: ',
             '$',eth.bid,
-            ' / $',eth.ask,
             '\nLTC: ',
             '$',ltc.bid,
-            ' / $',ltc.ask,
             '\ntime: ',moment(ltc.time).format('HH:mm:ss')
         ].join('')
 
