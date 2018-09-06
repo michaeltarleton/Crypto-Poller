@@ -1,6 +1,6 @@
 {
     "logger": {
-        "level": "trace"
+        "level": "debug"
     },
     "email": {
         "smtp": {
@@ -13,5 +13,5 @@
         "api": {
             "url": "https://api.gdax.com"
         }
-    }    
+    }
 }

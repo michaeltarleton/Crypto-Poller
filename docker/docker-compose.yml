@@ -14,3 +14,5 @@ services:
       - GDAXAPIKEY=
       - GDAXAPISECRET=
       - GDAXAPIPASSPHRASE=
+      - EMAILSMTPTO=
+      - LOGGERLEVEL=
