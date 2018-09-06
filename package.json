@@ -15,8 +15,9 @@
     "config": "^1.28.1",
     "crypto": "^1.0.1",
     "gdax": "github:coinbase/gdax-node",
+    "hoek": "^5.0.4",
     "make-promises-safe": "^1.1.0",
-    "moment": "^2.19.2",
+    "moment": "^2.22.2",
     "node-cron": "^1.2.1",
     "nodemailer": "^4.4.0",
     "pino": "^4.10.1"
