@@ -11,7 +11,7 @@ This project is designed to go out and fetch the latest currencies from the Coin
 
 ## Configuration
 
-|-----------------------|----------------------------------|
+
 | Environment Variable  | Description                      |
 |-----------------------|----------------------------------|
 | EMAILSMTPCLIENTID     | Google SMTP Client Id            |
@@ -22,7 +22,7 @@ This project is designed to go out and fetch the latest currencies from the Coin
 | GDAXAPIKEY            | GDAX API Key                     |
 | GDAXAPISECRET         | GDAX API Secret                  |
 | GDAXAPIPASSPHRASE     | GDAX API Passphrase              |
-|-----------------------|----------------------------------|
+
 
 ## TODO
 
