@@ -23,10 +23,3 @@ This project is designed to go out and fetch the latest currencies from the Coin
 | GDAXAPISECRET         | GDAX API Secret                  |
 | GDAXAPIPASSPHRASE     | GDAX API Passphrase              |
 | LOGGERLEVEL           | Logger level                     |
-
-## TODO
-
-- [x] Remove private environment variables from the Crypto-Base project into this one
-- [x] Allow for ENV vars to be added to this project's Docker app
-- [ ] De-couple Google SMTP settings
-- [ ] Add more settings through env vars: poll frequency, etc
