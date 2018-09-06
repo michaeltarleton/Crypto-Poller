@@ -1,0 +1,16 @@
+version: '3'
+services:
+  crypto-poller:
+    image: crypto-poller
+    build:
+      context: ../
+      dockerfile: ./docker/dockerfile
+    environment:
+      EMAILSMTPCLIENTID:
+      EMAILSMTPCLIENTSECRET:
+      EMAILSMTPREFRESHTOKEN:
+      EMAILSMTPFROM:
+      EMAILSMTPUSERNAME:
+      GDAXAPIKEY:
+      GDAXAPISECRET:
+      GDAXAPIPASSPHRASE:
