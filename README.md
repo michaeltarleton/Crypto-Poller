@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is designed to go out and fetch the latest currencies from the Coinbase Pro Exchange for the top three currencies: BTC, LTC, and ETH.
+This project is designed to go out and fetch the latest currencies from the Coinbase Pro Exchange for the top three currencies (BTC, LTC, and ETH) and email them out to specified users.
 
 ## Usage
 
@@ -26,6 +26,6 @@ This project is designed to go out and fetch the latest currencies from the Coin
 
 ## TODO
 
-[x] Remove private environment variables from the Crypto-Base project into this one
-[x] Allow for ENV vars to be added to this project's Docker app
-[ ] De-couple Google SMTP settings
+- [x] Remove private environment variables from the Crypto-Base project into this one
+- [x] Allow for ENV vars to be added to this project's Docker app
+- [ ] De-couple Google SMTP settings
