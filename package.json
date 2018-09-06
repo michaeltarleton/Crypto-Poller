@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "docker build -t 'crypto-poller' -f docker/dockerfile  ."
+    "build": "docker build -t 'crypto-poller' -f docker/dockerfile  .",
+    "compose": "docker-compose -f docker/docker-compose.yml up --build"
   },
   "author": "",
   "license": "ISC",
